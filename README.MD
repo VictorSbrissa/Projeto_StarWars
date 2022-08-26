@@ -29,3 +29,5 @@ After choosing the best ship for their use, the user can complete the purchase, 
 <h2 align="center" > Screen Preview: </h2>
 <img  align="left" alt="coding" width="400" src="https://raw.githubusercontent.com/VictorSbrissa/Projeto_StarWars/main/Tela1.jpg" />
 <img   align="rigth" alt="coding" width="400" src="https://raw.githubusercontent.com/VictorSbrissa/Projeto_StarWars/main/Tela2.jpg" />
+<h4 align="center"> To be continue... </ha4>
+<h3 align="center" >👍🏼  How to reach me: www.linkedin.com/in/victor-sbrissa  👍🏼 </h3>
