@@ -1,0 +1,29 @@
+<header class="main-header">
+    <h1 class="main-header__tilte">
+        <span class="main-header__title--blue">some.Store< </span>
+        <i class="fa-solid fa-jedi fa-3x"></i>
+        <span class="main-header__title--orange"> >.something</span>      
+    </h1>
+    <div class="container-menu">
+        <nav class="main-header__menu">
+            <ul>
+                <li>
+                    <a routerLink="/produtos/">Products</a>
+                </li>
+                <li>
+                    <a routerLink="/carrinho/">
+
+                        <i class="fa-brands fa-btc"></i>
+                        Shopping
+                        <span class="badge-carrinho">{{carrinhoService.obtemCarrinho().length}}</span>
+                    </a>
+                </li>
+                <li><a routerLink="/contato">Contact</a></li>
+                <li><a><i class="fa-brands fa-github"></i></a></li>
+                <li><a><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a><i class="fa-brands fa-twitch"></i></a></li>
+             </ul>
+        </nav>
+        <app-barrapesquisa></app-barrapesquisa>
+    </div>
+</header>

@@ -1,0 +1,86 @@
+<h2   class ='contact__title'> Contact... </h2>
+<section class="contact__container">
+    <form class="contact-form"  [formGroup]="formContato" (ngSubmit)="enviarFormulario()">
+        <input 
+            type="text" 
+            placeholder="Enter your Id"
+            formControlName="nome"
+            [class.valid]="formContato.controls['nome'].valid"
+            [class.invalid]="formContato.controls['nome'].invalid && (formContato.controls['nome'].touched || formContato.controls['nome'].dirty)"
+        />
+        <div *ngIf="formContato.controls['nome'].invalid && (formContato.controls['nome'].touched || formContato.controls['nome'].dirty)"  >
+            <small class="error-menssage"  *ngIf="formContato.controls['nome'].hasError('minlength')">
+                This Field needs 4 characters.
+            </small>
+            <small class="error-menssage"  *ngIf="formContato.controls['nome'].hasError('required')">
+                This Field needs to be filled in.
+            </small>
+        </div>
+
+
+        <input type="assunto" placeholder="Subject"
+            formControlName ="assunto"
+            [class.valid]="formContato.controls['assunto'].valid"
+            [class.invalid]="formContato.controls['assunto'].invalid && (formContato.controls['assunto'].touched || formContato.controls['assunto'].dirty)"
+            />
+        
+        <div *ngIf="formContato.controls['assunto'].invalid && (formContato.controls['assunto'].touched || formContato.controls['assunto'].dirty)"  >
+            <small class="error-menssage"  *ngIf="formContato.controls['assunto'].hasError('minlength')">
+                This Field needs 10 characters.
+            </small>
+            <small class="error-menssage"  *ngIf="formContato.controls['assunto'].hasError('required')">
+                This Field needs to be filled in.
+            </small>
+        </div>
+
+        <input 
+            type="tel" 
+            placeholder="(00) 0000-0000" 
+            mask="(00) 000000-0000"
+            formControlName ="telefone"
+            [class.valid]="formContato.controls['telefone'].valid"
+            [class.invalid]="formContato.controls['telefone'].invalid && (formContato.controls['telefone'].touched || formContato.controls['telefone'].dirty)"
+        />
+
+        <div *ngIf="formContato.controls['telefone'].invalid && (formContato.controls['telefone'].touched || formContato.controls['telefone'].dirty)"  >
+            <small class="error-menssage"  *ngIf="formContato.controls['telefone'].hasError('minlength')">
+                This Field needs 11 characters.
+            </small>
+            <small class="error-menssage"  *ngIf="formContato.controls['telefone'].hasError('required')">
+                This Field needs to be filled in.
+            </small>
+        </div>
+
+        <input 
+            type="email" 
+            placeholder="Enter your E-mail"
+            formControlName ="email"
+            [class.valid]="formContato.controls['email'].valid"
+            [class.invalid]="formContato.controls['email'].invalid && (formContato.controls['email'].touched || formContato.controls['telefone'].dirty)"
+        />
+
+        <div *ngIf="formContato.controls['email'].invalid && (formContato.controls['email'].touched || formContato.controls['email'].dirty)"  >
+            <small class="error-menssage"  *ngIf="formContato.controls['email'].hasError('email')">
+                Esse Campo precisa ser um e-mail.
+            </small>
+            <small class="error-menssage"  *ngIf="formContato.controls['email'].hasError('required')">
+                This Field needs to be filled in.
+            </small>
+        </div>
+
+        <textarea 
+            maxlength="300" 
+            placeholder="May the force be with you..."
+            rows="4"
+            formControlName ="menssagem"
+            [class.valid]="formContato.controls['menssagem'].valid"
+            [class.invalid]="formContato.controls['menssagem'].invalid && (formContato.controls['menssagem'].touched || formContato.controls['telefone'].dirty)"
+            ></textarea>
+
+        <button [disabled]="formContato.invalid" type="submit">SEND</button>
+    </form>
+    <address>
+        <p>thanks for visiting!!</p>
+        <img src="/assets/contato.png" width="700">
+    </address>
+</section>

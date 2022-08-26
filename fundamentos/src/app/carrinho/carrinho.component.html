@@ -1,0 +1,17 @@
+<h2 class="cart-title"> Increase your empire! </h2>
+<div *ngIf="itensCarrinho.length > 0; else semProduto">
+    <ul>
+        <li *ngFor="let itemCarrinho of itensCarrinho">
+            <img [src]="itemCarrinho.imagem">
+            <p class="font-p">Product>  {{itemCarrinho.descricao}}</p>
+            <p class="font-p">Price>  {{itemCarrinho.preco | currency}}</p>
+            <label>
+            <p class="font-p">Quantity><input type="number"[(ngModel)]='itemCarrinho.quantidade' (change)="calcularTotal()"></p>
+            </label>
+            <button class="remove-button" (click)="removeProdutoCarrinho(itemCarrinho.id)"><i class="fa-solid fa-xmark"></i></button>
+        </li>
+    </ul>
+    <h2 class="cart-total"> Total Price>  {{total | currency}}</h2>
+    <button class="buy-button" (click)="comprar()">Buy it!</button>
+</div>
+<ng-template #semProduto><p class="font--p">I find your lack of faith disturbing!</p></ng-template>

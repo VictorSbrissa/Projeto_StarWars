@@ -1,0 +1,27 @@
+.search-form {
+    height: 44px;
+    display: flex;
+    font-family: Cinzel;
+}
+
+.search-form button {
+    width: 56px;
+    height: 56px;
+    background-color: rgb(207, 181, 59);
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    font-family: Cinzel;
+}
+.search-form input{
+    box-sizing: border-box;
+    height: 56px;
+    padding: 20px;
+    flex: 1;
+    background-color: rgb(128, 128, 128);
+    color: #FFF;
+    border: none;
+    transition: all .3s ease;
+    font-size: 22px;
+    font-family: Cinzel;
+}
