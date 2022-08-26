@@ -26,3 +26,6 @@ for acquisition after analyzing a portfolio of ships.
 <h4>
 After choosing the best ship for their use, the user can complete the purchase, accessing their shopping cart, removing or adding new items.
 </h4> 
+<h2 align="center" > Screen Preview: </h2>
+<img  align="left" alt="coding" width="400" src="https://raw.githubusercontent.com/VictorSbrissa/Projeto_StarWars/main/Tela1.jpg" />
+<img   align="rigth" alt="coding" width="400" src="https://raw.githubusercontent.com/VictorSbrissa/Projeto_StarWars/main/Tela2.jpg" />
